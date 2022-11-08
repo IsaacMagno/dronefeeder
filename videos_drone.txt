@@ -1,16 +1,12 @@
-Entrega:
+3
 https://dm0qx8t0i9gc9.cloudfront.net/previews/video/BKaAXTX/a-small-drone-delivers-a-package-to-a-residence_hncr4txb__ebfabebae567118661ccee66b7ded54e__P180.mp4
 
-Voando:
-https://dm0qx8t0i9gc9.cloudfront.net/previews/video/V7QIfdTcgikqxmxok/videoblocks-quadrocopter-carrying-a-parcel_hgjuol76q__84a339e4da9e94391bdc53be805ab1ac__P180.mp4
 
-Voando:
+2
 https://dm0qx8t0i9gc9.cloudfront.net/previews/video/49EwKH5deijotr386/videoblocks-drone-delivering-package-on-the-sky-background-slow-motion_hlckmjklz__9904fad60b72253d2d905817aaa8c4a3__P180.mp4
 
-Decolando:
-https://dm0qx8t0i9gc9.cloudfront.net/previews/video/SE6H2xwPmjlia3kue/videoblocks-camera-camera-drone-flying-by_rujgjoccx__d2fa2be84526d8101a8cce22a7526293__P180.mp4
 
-
+1
 https://dm0qx8t0i9gc9.cloudfront.net/previews/video/GTYSdDW/drone-flight-above-big-city-animation-of-drone-flighting_r5xyrogoxe__ca35c73a9270f428778b0ce4f48ac49e__P180.mp4
 
 #DEPLOY

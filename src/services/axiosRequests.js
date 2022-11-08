@@ -30,6 +30,11 @@ export const getDrone = async (id) => {
   return drone;
 };
 
+export const getDroneList = async () => {
+  const drone = await axios.get(`${BASE_URL}/drone`).then((o) => o.data);
+  return drone;
+};
+
 export const getVideos = async () => {
   const videos = await axios.get(`${BASE_URL}/drone/video`).then((o) => o.data);
   return videos;

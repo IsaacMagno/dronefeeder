@@ -6,6 +6,7 @@ import {
   deleteEntrega,
   getDrone,
   getVideos,
+  getDroneList,
 } from "../services/axiosRequests";
 
 const CallDrone = () => {
@@ -36,32 +37,34 @@ const CallDrone = () => {
 
     setDroneStatus("preparando");
 
-    const vidUrl = videosList.filter((video) => video.nome == "preparando");
+    const vidUrl = videosList.filter((video) => video.nome === "preparando");
 
     setVideoUrl(vidUrl[0].url);
   };
 
   const videoHandler = async () => {
-    if (droneStatus == "preparando") {
+    if (droneStatus === "preparando") {
       setDroneStatus("rota de entrega");
 
       const vidUrl = videosList.filter(
-        (video) => video.nome == "rota de entrega"
+        (video) => video.nome === "rota de entrega"
       );
 
       return setVideoUrl(vidUrl[0].url);
     }
 
-    if (droneStatus == "rota de entrega") {
+    if (droneStatus === "rota de entrega") {
       setDroneStatus("descarregando");
       const vidUrl = videosList.filter(
-        (video) => video.nome == "descarregando"
+        (video) => video.nome === "descarregando"
       );
       return setVideoUrl(vidUrl[0].url);
     }
 
-    if (droneStatus == "descarregando") {
-      const { entregas } = await getDrone(4);
+    if (droneStatus === "descarregando") {
+      const drones = await getDroneList();
+      console.log(drones);
+      const { entregas } = await getDrone(14);
       const { id } = entregas[0];
       deleteEntrega(id);
       setDroneStatus("entregue");
@@ -71,7 +74,7 @@ const CallDrone = () => {
   return (
     <div className='relative min-h-screen flex flex-col items-center justify-center text-center  py-0 px-3'>
       <div className='top-0 left-0 w-full h-full overflow-hidden flex justify-center'>
-        {droneStatus == "none" ? (
+        {droneStatus === "none" ? (
           <div
             className='rounded bg-gray-300 p-8 min-h-full max-w-xl'
             id='form-div'
@@ -107,7 +110,7 @@ const CallDrone = () => {
           </div>
         ) : (
           <div>
-            {droneStatus != "entregue" ? (
+            {droneStatus !== "entregue" ? (
               <video
                 width={700}
                 autoPlay
