@@ -63,8 +63,7 @@ const CallDrone = () => {
 
     if (droneStatus === "descarregando") {
       const drones = await getDroneList();
-      console.log(drones);
-      const { entregas } = await getDrone(14);
+      const { entregas } = await getDrone(drones[0].id);
       const { id } = entregas[0];
       deleteEntrega(id);
       setDroneStatus("entregue");
@@ -109,14 +108,14 @@ const CallDrone = () => {
             </form>
           </div>
         ) : (
-          <div>
+          <div className='mb-5'>
             {droneStatus !== "entregue" ? (
               <video
                 width={700}
                 autoPlay
                 muted
                 onEnded={() => videoHandler()}
-                className='min-w-full min-h-full rounded'
+                className='min-w-full min-h-full rounded shadow-sm shadow-black'
                 src={videoUrl}
               ></video>
             ) : (

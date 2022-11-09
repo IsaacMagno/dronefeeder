@@ -19,7 +19,7 @@ const Home = () => {
           <CallDrone />
         </FullpageSection>
       </FullPageSections>
-      <div className='text-center min-h-full '></div>
+      {/* <div className='text-center min-h-full '></div> */}
       <footer
         className='text-gray-300 flex items-end justify-center font-thin'
         id='footer'
